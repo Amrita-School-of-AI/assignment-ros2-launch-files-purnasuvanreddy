@@ -3,7 +3,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    talker_node = Node(
+    talker = Node(
         package='ros2_launch_demo',
         executable='talker',
         name='talker',
@@ -13,7 +13,7 @@ def generate_launch_description():
         }]
     )
 
-    listener_node = Node(
+    listener = Node(
         package='ros2_launch_demo',
         executable='listener',
         name='listener',
@@ -21,6 +21,6 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        talker_node,
-        listener_node
+        talker,
+        listener
     ])
